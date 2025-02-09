@@ -74,7 +74,7 @@ Bu dosya, uygulamanın işlevselliğini test etmek için yazılan senaryoları i
 - **Beklenen Sonuç:**
   - Sepetteki ürün çıkarıldı ve sepet sonucu yazdırıldı.
 
-### 5. Overlay, Uyarı ve Bilgi Balonları
+### GENEL: Overlay, Uyarı ve Bilgi Balonları
 - **Adımlar:**
   - Çıkan overlay, uyarı ve bilgi balonlarının kapanması sağlanacak.
 - **Beklenen Sonuç:**
