@@ -1,128 +1,99 @@
-Test Senaryoları
-Bu doküman, uygulamanın işlevselliğini test etmek için yazılan senaryoları içermektedir.
+# Test Senaryoları
 
-Setup
-Tarayıcıyı aç
-Pencereyi genişlet
-Sayfaya git
-Pop-up, overlay, uyarıları kapat
-Login Testleri
-1. Kullanıcı Adı Boş, Şifre Var
-Adımlar:
+Bu dosya, uygulamanın işlevselliğini test etmek için yazılan senaryoları içermektedir. Aşağıda belirtilen testler, uygulamanın düzgün çalıştığını doğrulamak amacıyla adım adım gerçekleştirilecektir.
 
-Kullanıcı adı boş, şifre dolu şekilde giriş yapmaya çalış.
-Beklenen Sonuç:
+## Setup
+- Tarayıcıyı aç
+- Pencereyi genişlet
+- Sayfaya git
+- Pop-up, overlay ve uyarıları kapat
 
-Giriş yapılmadı, uyarı yazdırıldı.
-Koşum Başarılı
-2. Kullanıcı Adı Var, Şifre Boş
-Adımlar:
+## Login Testleri
 
-Kullanıcı adı dolu, şifre boş şekilde giriş yapmaya çalış.
-Beklenen Sonuç:
+### 1. Kullanıcı Adı Boş, Şifre Var
+- **Adımlar:**
+  - Kullanıcı adı boş, şifre dolu şekilde giriş yapmaya çalış.
+- **Beklenen Sonuç:**
+  - Giriş yapılmadı, uyarı yazdırıldı.
+  - **Koşum Başarılı**
 
-Giriş yapılmadı, uyarı yazdırıldı.
-Koşum Başarılı
-3. Kullanıcı Adı ve Şifre Boş
-Adımlar:
+### 2. Kullanıcı Adı Var, Şifre Boş
+- **Adımlar:**
+  - Kullanıcı adı dolu, şifre boş şekilde giriş yapmaya çalış.
+- **Beklenen Sonuç:**
+  - Giriş yapılmadı, uyarı yazdırıldı.
+  - **Koşum Başarılı**
 
-Hem kullanıcı adı hem şifre boş bırakılarak giriş yapılmaya çalış.
-Beklenen Sonuç:
+### 3. Kullanıcı Adı ve Şifre Boş
+- **Adımlar:**
+  - Hem kullanıcı adı hem şifre boş bırakılarak giriş yapılmaya çalış.
+- **Beklenen Sonuç:**
+  - Giriş yapılmadı, uyarı yazdırıldı.
+  - **Koşum Başarılı**
 
-Giriş yapılmadı, uyarı yazdırıldı.
-Koşum Başarılı
-4. Yanlış Kullanıcı Adı ve Şifre
-Adımlar:
+### 4. Yanlış Kullanıcı Adı ve Şifre
+- **Adımlar:**
+  - Yanlış kullanıcı adı ve şifre ile giriş yapılmaya çalış.
+- **Beklenen Sonuç:**
+  - Giriş yapılmadı, uyarı yazdırıldı.
+  - **Koşum Başarılı**
 
-Yanlış kullanıcı adı ve şifre girerek giriş yapmaya çalış.
-Beklenen Sonuç:
+## Arama Testi
 
-Giriş yapılmadı, uyarı yazdırıldı.
-Koşum Başarılı
-Arama Testi
-1. Arama Kutusuna Yaz ve Arama Yap
-Adımlar:
+- **Adımlar:**
+  - Giriş sayfası arama kutusuna tıkla, yaz ve Enter'a bas.
+  - 1 saniye bekle.
+- **Beklenen Sonuç:**
+  - Arama sonucu sayfası yüklendi.
 
-Giriş sayfasında arama kutusuna tıkla, yaz ve Enter’a bas.
-1 saniye bekle.
-Beklenen Sonuç:
+## Sepet İşlemleri
 
-Arama sonucu düzgün şekilde gösterilmeli.
-Sepet İşlemleri
-1. Sepete Ürün Ekleme ve Sepet Sayfasına Gitme
-Adımlar:
+### 1. Seçilen Ürün Detayına Git
+- **Adımlar:**
+  - Seçilen ürünün detayına git.
+  - Sepete ekle.
+  - Sepet sayfasına git.
+- **Beklenen Sonuç:**
+  - Sepetteki ürün sayısını yazdır.
 
-Seçilen ürünün detayına git.
-Ürünü sepete ekle.
-Sepet sayfasına git.
-Beklenen Sonuç:
+### 2. Sepetteki Üründen Kaç Adet Alındığını Göster
+- **Adımlar:**
+  - Sepetteki üründen kaç adet olduğunu yazdır.
+- **Beklenen Sonuç:**
+  - Ürün adedi doğru olarak yazdırıldı.
 
-Sepetteki ürün doğru şekilde görünmeli.
-2. Sepetteki Ürünün Adedini Yazdırma
-Adımlar:
+### 3. Sepetteki Ürünü Arttır
+- **Adımlar:**
+  - Sepetteki üründen bir adet arttır.
+- **Beklenen Sonuç:**
+  - Sepetteki ürün adedi arttı ve yazdırıldı.
 
-Sepetteki üründen kaç adet alındığını yazdır.
-Beklenen Sonuç:
+### 4. Sepetteki Ürünü Çıkar
+- **Adımlar:**
+  - Sepetteki ürünü çıkar.
+- **Beklenen Sonuç:**
+  - Sepetteki ürün çıkarıldı ve sepet sonucu yazdırıldı.
 
-Ürünün sayısı doğru şekilde yazdırılmalı.
-3. Sepetteki Ürünün Miktarını Arttırma
-Adımlar:
+### 5. Overlay, Uyarı ve Bilgi Balonları
+- **Adımlar:**
+  - Çıkan overlay, uyarı ve bilgi balonlarının kapanması sağlanacak.
+- **Beklenen Sonuç:**
+  - Overlay, uyarı ve bilgi balonları kapatıldı.
 
-Sepetteki üründen 1 adet daha al.
-Beklenen Sonuç:
+## Sepete Çoklu Ürün Ekleme
 
-Sepetteki ürün miktarı arttırıldı ve doğru şekilde yazdırıldı.
-4. Sepetteki Ürünü Çıkarma
-Adımlar:
+### 1. Ürünleri Sepete Ekle
+- **Adımlar:**
+  - Seçilen ürün detayına git, sepete ekle ve ürün fiyatını yazdır.
+  - Anasayfaya dön.
+  - Diğer ürünleri sepete ekle ve fiyatları yazdır.
+  - Sepet sayfasına git.
+- **Beklenen Sonuç:**
+  - Kaç adet ürün olduğunu göster.
+  - Sepetteki ürünlerin fiyatlarını listele.
 
-Sepetteki ürünü sepetten çıkar.
-Beklenen Sonuç:
-
-Ürün sepetten çıkarıldı.
-Sepet sonucu yazdırıldı.
-Pop-up, overlay, uyarı, bilgi balonları beklendi, kapatıldı.
-Sepete Çoklu Ürün Ekleme
-1. İlk Ürünü Sepete Ekleme
-Adımlar:
-
-Seçilen ürünün detayına git.
-Ürünü sepete ekle.
-Ürün fiyatını yazdır.
-Beklenen Sonuç:
-
-Ürün sepete başarıyla eklendi ve fiyatı doğru şekilde yazdırıldı.
-2. Ana Sayfaya Dönüp İkinci Ürünü Sepete Ekleme
-Adımlar:
-
-Ana sayfaya dön.
-Seçilen ikinci ürünü sepete ekle.
-Ürün fiyatını yazdır.
-Beklenen Sonuç:
-
-İkinci ürün sepete başarıyla eklendi ve fiyatı doğru şekilde yazdırıldı.
-3. Sepet Sayfasına Gitme ve Ürün Sayısını Kontrol Etme
-Adımlar:
-
-Sepet sayfasına git.
-Kaç adet ürün olduğunu göster.
-Beklenen Sonuç:
-
-Sepetteki ürün sayısı doğru şekilde gösterilmeli.
-4. Sepetteki Ürün Fiyatlarını Listeleme
-Adımlar:
-
-Sepetteki ürünlerin fiyatlarını listele.
-Beklenen Sonuç:
-
-Ürünlerin fiyatları doğru şekilde listelenmeli.
-Tarayıcıyı Kapatma
-Adımlar:
-
-Tarayıcıyı kapat.
-Beklenen Sonuç:
-
-Tarayıcı düzgün şekilde kapanmalı.
-Notlar:
-
-Yukarıdaki testler uygulamanın temel işlevselliğini kapsamaktadır ve her testin başarılı olması beklenmektedir.
-Testler sırasında oluşabilecek hata ve beklenmeyen durumlar için raporlama yapılmalıdır.
+## Tarayıcıyı Kapat
+- **Adımlar:**
+  - Tarayıcıyı kapat.
+- **Beklenen Sonuç:**
+  - Tarayıcı başarıyla kapandı.
